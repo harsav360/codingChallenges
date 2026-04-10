@@ -32,8 +32,10 @@ def main():
         words = file_content.split()
         word_count = len(words)
         result.append(str(word_count))
-    if args.chars or no_flags:
-        pass
+    if args.chars:
+        text_content = file_content.decode('utf-8')
+        char_count = len(text_content)
+        result.append(str(char_count))
     if args.bytes or no_flags:
         byte_count = len(file_content)
         result.append(str(byte_count))
