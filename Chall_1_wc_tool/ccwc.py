@@ -29,7 +29,9 @@ def main():
         line_count = file_content.count(b'\n')
         result.append(str(line_count))
     if args.words or no_flags:
-        pass
+        words = file_content.split()
+        word_count = len(words)
+        result.append(str(word_count))
     if args.chars or no_flags:
         pass
     if args.bytes or no_flags:
