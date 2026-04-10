@@ -26,7 +26,8 @@ def main():
     result = []
 
     if args.lines or no_flags:
-        pass
+        line_count = file_content.count(b'\n')
+        result.append(str(line_count))
     if args.words or no_flags:
         pass
     if args.chars or no_flags:
